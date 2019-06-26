@@ -62,44 +62,59 @@ submitButton.addEventListener('click', updateCoffees);
 // ------------------our code----------------------//
 
 
-// filterInput.addEventListener('keyup', filterNames);
 
 
-var filterInput = document.getElementById("filterInput");
+var filterInput = document.getElementById("roast-selection");
+
+filterInput.addEventListener('change', updateCoffees);
+
+
+var searchFilter = document.getElementById("filterInput");
+
+searchFilter.addEventListener('keyup',coffeeSearch);
 
 
 
-filterInput.addEventListener('change', filterCoffee);
-//
-// for (var i = 0; i < coffees.length; i++) {
-//             var roastType = coffees[i].roast;
-//         }
-//         // console.log(coffees.length);
-//     console.log(roastType);
 
-function roastType(roast) {
-    coffees.forEach(function (coffee) {
-        if (roast === coffee.roast) {
-            console.log(coffee.roast)
+var textSearch = document.querySelector('#filterInput');
+
+function coffeeSearch(e) {
+    e.preventDefault(); // don't submit the form, we just want to update the data
+    var coffeeSearch = textSearch.value.toUpperCase();
+    var filteredCoffees = [];
+    coffees.forEach(function(coffee) {
+        if (coffee.name.toUpperCase().indexOf(coffeeSearch) > -1) {
+            filteredCoffees.push(coffee);
         }
-
-
     });
-
-}
-// var names = document.getElementById('names').querySelectorAll('li.collection-item');
-
-
-
-function filterCoffee() {
-    var filter = document.getElementById("filterInput").value.toUpperCase();
-    var roastFilter = document.querySelector('#roast-selection');
-    console.log(roastType(roastFilter));
-    return roastType(roastFilter);
-
-
+    tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
-console.log(filterCoffee());
+
+// function roastType(roast) {
+//     coffees.forEach(function (coffee) {
+//         if (roast === coffee.roast) {
+//             console.log(coffee.roast)
+//         }
+//
+//
+//     });
+//
+// }
+//
+//
+//
+// function filterCoffee() {
+//     var filter = document.getElementById("filterInput").value.toUpperCase();
+//     var roastFilter = document.querySelector('#roast-selection');
+//     console.log(roastType(roastFilter));
+//     return roastType(roastFilter);
+//
+//
+// }
+//
+//
+//
+// console.log(filterCoffee());
 
 
