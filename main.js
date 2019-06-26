@@ -56,7 +56,7 @@ var roastSelection = document.querySelector('#roast-selection');
 tbody.innerHTML = renderCoffees(coffees);
 // console.log(tbody);
 
-submitButton.addEventListener('click', updateCoffees);
+// submitButton.addEventListener('click', updateCoffees);
 
 
 // ------------------our code----------------------//
@@ -90,6 +90,21 @@ function coffeeSearch(e) {
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
+var coffeeAdd = document.querySelector('#addCoffee');
+var roastAdd = document.querySelector('#roastNew');
+var userSubmit = document.querySelector('#submitNew');
+
+function addToCoffees(e) {
+    e.preventDefault();
+    var newCoffee = {};
+    newCoffee.id = coffees.length+1;
+    newCoffee.name = coffeeAdd.value;
+    newCoffee.roast = roastAdd.value;
+    coffees.push(newCoffee);
+    tbody.innerHTML = renderCoffees(coffees)
+}
+
+userSubmit.addEventListener('click', addToCoffees);
 
 // function roastType(roast) {
 //     coffees.forEach(function (coffee) {
