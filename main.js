@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 function renderCoffee(coffee) {
     var html = '<tr class="coffee">';
@@ -45,13 +45,28 @@ var coffees = [
     {id: 11, name: 'Espresso', roast: 'dark'},
     {id: 12, name: 'Viennese', roast: 'dark'},
     {id: 13, name: 'Italian', roast: 'dark'},
-    {id: 14, name: 'French', roast: 'dark'},
+    {id: 14, name: 'French', roast: 'dark'}
 ];
 
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 
+
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+
+
+// ------------------our code----------------------//
+
+
+// filterInput.addEventListener('keyup', filterNames);
+
+
+var filterInput = document.getElementById("filterInput");
+
+filterInput.addEventListener('keyup', renderCoffees);
+
+
+
