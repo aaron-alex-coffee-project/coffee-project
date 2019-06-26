@@ -66,7 +66,36 @@ submitButton.addEventListener('click', updateCoffees);
 
 var filterInput = document.getElementById("filterInput");
 
-filterInput.addEventListener('keyup', renderCoffees);
 
+
+filterInput.addEventListener('keyup', filterCoffee);
+//
+// for (var i = 0; i < coffees.length; i++) {
+//             var roastType = coffees[i].roast;
+//         }
+//         // console.log(coffees.length);
+//     console.log(roastType);
+
+function roastType(roast) {
+    coffees.forEach(function (coffee) {
+        if (roast === coffee.roast) {
+            console.log(coffee.roast)
+        }
+
+
+    });
+
+}
+// var names = document.getElementById('names').querySelectorAll('li.collection-item');
+
+
+
+function filterCoffee() {
+    var filter = document.getElementById("filterInput").value.toUpperCase();
+    var roastFilter = document.querySelector('#coffees');
+    console.log(roastType(roastFilter));
+
+
+}
 
 
