@@ -45,6 +45,17 @@ body{
 
 }
 
-#submitNew {
-    background-color: #c7ad9d;
+.pickNav {
+    background-color:transparent;
+    position:absolute;
+}
+
+#Nav{
+    position:absolute;
+
+}
+.NavPick{
+    color:white;
+    font-family: 'Special Elite', cursive;
+
 }
