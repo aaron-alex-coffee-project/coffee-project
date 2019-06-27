@@ -5,26 +5,27 @@
     <title></title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Special+Elite&display=swap" rel="stylesheet">
 
 
 </head>
 <body>
-<div class ="container">
+<div id="container-coffee" class ="container">
     <div class ="row">
         <div class="col-lg-12 text-center">
-            <h2>COFFEE</h2>
+            <h1 id="coffeeHeader"></h1>
             <hr>
         </div>
     </div>
-    <div class="row">
-        <ul id="coffees" class="col-lg-6">
+    <div class="row" >
+        <div id="coffees" class="col-lg-6 d-flex align-content-stretch flex-wrap ">
 
-        </ul>
+        </div>
 
-        <div class="col-lg-6">
+        <div id="filterSearch" class="col-lg-6">
     <form>
         <label for="roast-selection"></label>
-        <strong>Roast</strong>
+        <h5>Roast</h5>
 
         <select id="roast-selection" class="form-control form-control-sm">
             <option>light</option>
@@ -32,10 +33,10 @@
             <option>dark</option>
         </select>
         <br>
-        <strong>Coffee name</strong>
+        <h5>Coffee name</h5>
         <input class="form-control" id="filterInput" type="text" placeholder="Search..">
         <br>
-        <input class="form-control" id="search2" type="submit" placeholder="Search..">
+<!--        <input class="form-control" id="search2" type="submit" placeholder="Search..">-->
     </form>
             <hr>
 
@@ -47,13 +48,13 @@
             </div>
         </div>
         <h2>Add a Coffee</h2>
-        <strong>Roast</strong>
+        <h5>Roast</h5>
         <select id="roastNew" class="form-control form-control-sm" name="select">
             <option value="light">Light</option>
             <option value="medium">Medium</option>
             <option value="dark">Dark</option>
         </select>
-        <strong>Name</strong>
+        <h5>Name</h5>
         <br>
         <input class="form-control" id="addCoffee" type="text" placeholder="Search..">
         <br>
