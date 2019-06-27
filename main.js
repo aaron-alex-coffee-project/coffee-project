@@ -1,9 +1,9 @@
 "use strict";
 
 function renderCoffee(coffee) {
-    var html = '<div class="coffee">';
+    var html = '<div class="coffee col-lg-6">';
     html += '<h3>' + coffee.name +' </h3>';
-    html += '<p>' + coffee.roast + ' </p>';
+    html += '<span>' + coffee.roast + ' </span>';
     html += '</div>';
 
     return html;
@@ -49,7 +49,7 @@ var coffees = [
 ];
 
 var tbody = document.getElementById('coffees');
-var submitButton = document.querySelector('#submit');
+// var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 
 

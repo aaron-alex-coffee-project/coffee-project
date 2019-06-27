@@ -29,7 +29,7 @@ body{
 
     padding: 10px;
     font-family: 'Special Elite', cursive;
-    color:tan;
+    color:#c7ad9d;
 
 
 }
@@ -40,8 +40,11 @@ body{
 
 }
 #filterSearch{
-    color:tan;
+    color: #c7ad9d;
     font-family: 'Special Elite', cursive;
 
 }
 
+#submitNew {
+    background-color: #c7ad9d;
+}
