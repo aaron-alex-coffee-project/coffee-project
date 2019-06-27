@@ -26,21 +26,15 @@ body{
 
 .coffee{
 
-
     padding: 10px;
     font-family: 'Special Elite', cursive;
     color:#c7ad9d;
 
 
 }
-#coffeeHeader{
-    background-image:url("fancycoffee.PNG");
-    height:750px;
 
-
-}
 #filterSearch{
-    color: #c7ad9d;
+    color: white;
     font-family: 'Special Elite', cursive;
 
 }
@@ -54,8 +48,40 @@ body{
     position:absolute;
 
 }
-.NavPick{
+
+#submitNew {
+    background-color: #c7ad9d;
+}
+
+#submitNew:hover {
+    background-color: tan;
+}
+#submitNew:active {
+    background-color: grey;
+}
+
+.navPick{
     color:white;
     font-family: 'Special Elite', cursive;
+
+}
+
+.headImg {
+    height: 650px;
+    width: 100%;
+    border: solid grey 5px;
+    border-radius: 50%;
+}
+
+#navText {
+    font-size: 1.9em;
+    font-weight: bold;
+}
+
+#navText:hover {
+    color: #c7ad9d;
+}
+#navText:active {
+    color: grey;
 
 }

@@ -106,6 +106,12 @@ function addToCoffees(e) {
 
 userSubmit.addEventListener('click', addToCoffees);
 
+var invis = document.getElementById("invis");
+
+invis.addEventListener('click', function(){
+    invis.style.display = "none";
+    }
+);
 // function roastType(roast) {
 //     coffees.forEach(function (coffee) {
 //         if (roast === coffee.roast) {

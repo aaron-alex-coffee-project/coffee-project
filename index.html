@@ -10,17 +10,16 @@
 
 </head>
 <body>
-<section>
-    <div id="Nav" class="col-lg-12 ">
-        <nav class="pickNav navbar sticky-top navbar-dark  justify-content-center">
-            <a class=" NavPick navbar-brand" href="#">Pick a Coffee</a>
-        </nav>
-    </div>
-</section>
+
 <div id="container-coffee" class ="container">
-    <div class ="row">
-            <img class="img-fluid" src="fancycoffee.PNG" height="700" width="100%" >
-            <hr>
+    <div id="invis" class ="row">
+        <div id="Nav" class="col-lg-11 justify-content-center">
+            <nav class="pickNav navbar sticky-top navbar-dark mx-auto justify-content-center">
+                <a class=" navPick navbar-brand" href="#coffees"><span id="navText">Pick a Coffee</span></a>
+            </nav>
+        </div>
+        <div class=" col-lg-12">
+            <img class="headImg" src="fancycoffee.PNG"  alt="coffee">
         </div>
     </div>
     <div class="row" >
@@ -32,7 +31,6 @@
     <form>
         <label for="roast-selection"></label>
         <h5>Roast</h5>
-
         <select id="roast-selection" class="form-control form-control-sm">
             <option>light</option>
             <option>medium</option>
@@ -42,7 +40,6 @@
         <h5>Coffee name</h5>
         <input class="form-control" id="filterInput" type="text" placeholder="Search..">
         <br>
-<!--        <input class="form-control" id="submit" type="submit" placeholder="Search..">-->
     </form>
             <hr>
 
@@ -50,7 +47,6 @@
     <div>
         <div>
             <div>
-<!--                <div>ID</div>-->
             </div>
         </div>
         <h2>Add a Coffee</h2>
@@ -60,12 +56,11 @@
             <option value="medium">Medium</option>
             <option value="dark">Dark</option>
         </select>
-        <h5>Name</h5>
         <br>
+        <h5>Name</h5>
         <input class="form-control" id="addCoffee" type="text" placeholder="Search..">
         <br>
         <input class="form-control" id="submitNew" type="submit" placeholder="Search..">
-
 
     </div>
         </div>
