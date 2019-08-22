@@ -2,8 +2,8 @@
 
 function renderCoffee(coffee) {
     var html = '<div class="coffee col-lg-6">';
-    html += '<h3>' + coffee.name +' </h3>';
-    html += '<span>' + coffee.roast + ' </span>';
+    html += '<h3>' + coffee.name +'</h3>';
+    html += '<span>' + coffee.roast + '</span>';
     html += '</div>';
 
     return html;
@@ -83,7 +83,7 @@ function coffeeSearch(e) {
     var coffeeSearch = textSearch.value.toUpperCase();
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if (coffee.name.toUpperCase().indexOf(coffeeSearch) > -1) {
+        if (coffee.name.toUpperCase().includes(coffeeSearch)) {
             filteredCoffees.push(coffee);
         }
     });
@@ -112,30 +112,3 @@ invis.addEventListener('click', function(){
     invis.style.display = "none";
     }
 );
-// function roastType(roast) {
-//     coffees.forEach(function (coffee) {
-//         if (roast === coffee.roast) {
-//             console.log(coffee.roast)
-//         }
-//
-//
-//     });
-//
-// }
-//
-//
-//
-// function filterCoffee() {
-//     var filter = document.getElementById("filterInput").value.toUpperCase();
-//     var roastFilter = document.querySelector('#roast-selection');
-//     console.log(roastType(roastFilter));
-//     return roastType(roastFilter);
-//
-//
-// }
-//
-//
-//
-// console.log(filterCoffee());
-
-
